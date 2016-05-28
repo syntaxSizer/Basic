@@ -19,7 +19,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textColor="#FFBF00"
-        android:layout_margin="60dp"/>
+        android:layout_margin="6dp"/>
 
     <TextView
         android:layout_marginTop="20dp"
@@ -71,48 +71,53 @@
         android:layout_height="wrap_content"
         android:text="+"
         android:id="@+id/addition"
-        android:textSize="40dp"
+
         android:backgroundTint="#FFBF00"
         android:textColor="#fff"
         android:layout_below="@+id/secondtextfield"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/edsecondnumber"
+        android:layout_alignEnd="@+id/edsecondnumber" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="-"
         android:id="@+id/subtra"
-        android:textSize="40dp"
+
         android:backgroundTint="#FFBF00"
         android:textColor="#fff"
-        android:layout_alignTop="@+id/addition"
-        android:layout_toRightOf="@+id/addition"
-        android:layout_toEndOf="@+id/addition" />
+        android:layout_above="@+id/multi"
+        android:layout_alignRight="@+id/secondtextfield"
+        android:layout_alignEnd="@+id/secondtextfield" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="/"
         android:id="@+id/divide"
+
+        android:backgroundTint="#FFBF00"
+        android:textColor="#fff"
         android:layout_below="@+id/secondtextfield"
         android:layout_toRightOf="@+id/subtra"
-        android:layout_toEndOf="@+id/subtra"
-        android:textSize="40dp"
-        android:backgroundTint="#FFBF00"
-        android:textColor="#fff"/>
+        android:layout_alignRight="@+id/multi"
+        android:layout_alignEnd="@+id/multi" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="*"
         android:id="@+id/multi"
-        android:layout_alignTop="@+id/divide"
-        android:layout_toRightOf="@+id/divide"
-        android:layout_toEndOf="@+id/divide"
-        android:textSize="40dp"
+
         android:backgroundTint="#FFBF00"
-        android:textColor="#fff"/>
+        android:textColor="#fff"
+        android:layout_below="@+id/addition"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -124,6 +129,6 @@
         android:layout_alignEnd="@+id/textView"
         android:layout_marginTop="72dp"
         android:textColor="#fff"
-        android:textSize="40dp"/>
+        android:textSize="30dp"/>
 
 </RelativeLayout>

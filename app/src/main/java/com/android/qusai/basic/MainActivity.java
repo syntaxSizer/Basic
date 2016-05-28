@@ -17,16 +17,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        math();
+        init();
     }
-    private math(){
-        addition =(Button) findViewById(R.id,addition);
-        subtra = (Button) findViewById(R.id,subtra);
-        divide = (Button) findViewById(R.id,divide);
-        multi = (Button) findViewById(R.id,multi);
-        firsttextfield = (TextView) findViewById(R.id,firsttextfield);
-        secondtextfield = (TextView) findViewById(R.id,secondtextfield);
-        result = (TextView) findViewById(R.id,result);
+    private void init(){
+        addition = (Button) findViewById(R.id.addition);
+        subtra = (Button) findViewById(R.id.subtra);
+        divide = (Button) findViewById(R.id.divide);
+        multi = (Button) findViewById(R.id.multi);
+        firsttextfield = (EditText) findViewById(R.id.firsttextfield);
+        secondtextfield = (EditText) findViewById(R.id.secondtextfield);
+        result = (TextView) findViewById(R.id.result);
 
         addition.setOnClickListener(this);
         subtra.setOnClickListener(this);
@@ -37,11 +37,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        String num1 = firsttextfield.getText().toString();
+        String num2 = secondtextfield.getText().toString();
      switch (v.getId()){
-         String num1 = firsttextfield.getText().toString();
-         String num2 = secondtextfield.getText().toString();
+
          case R.id.addition:
-             int adding = Integer.parseInt(num1,) + Integer.parseInt(num2);
+             int adding = Integer.parseInt(num1) + Integer.parseInt(num2);
              result.setText(String.valueOf(adding));
              break;
          case R.id.subtra:
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
              }
              break;
-             }
+
          case R.id.multi:
              int mutiplication = Integer.parseInt(num1)*Integer.parseInt(num2);
              result.setText(String.valueOf(mutiplication));
